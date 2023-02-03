@@ -14,6 +14,7 @@
 		78826EEE298C0D450097A697 /* ButtonStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78826EED298C0D450097A697 /* ButtonStyleTests.swift */; };
 		78826EF8298C0D450097A697 /* ButtonStyleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78826EF7298C0D450097A697 /* ButtonStyleUITests.swift */; };
 		78826EFA298C0D450097A697 /* ButtonStyleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78826EF9298C0D450097A697 /* ButtonStyleUITestsLaunchTests.swift */; };
+		78826F07298D91040097A697 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78826F06298D91040097A697 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		78826EF3298C0D450097A697 /* ButtonStyleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonStyleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78826EF7298C0D450097A697 /* ButtonStyleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleUITests.swift; sourceTree = "<group>"; };
 		78826EF9298C0D450097A697 /* ButtonStyleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78826F06298D91040097A697 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				78826EDC298C0D440097A697 /* ButtonStyleApp.swift */,
 				78826EDE298C0D440097A697 /* ContentView.swift */,
+				78826F06298D91040097A697 /* ColorExtensions.swift */,
 				78826EE0298C0D450097A697 /* Assets.xcassets */,
 				78826EE2298C0D450097A697 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				78826EDF298C0D440097A697 /* ContentView.swift in Sources */,
 				78826EDD298C0D440097A697 /* ButtonStyleApp.swift in Sources */,
+				78826F07298D91040097A697 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
