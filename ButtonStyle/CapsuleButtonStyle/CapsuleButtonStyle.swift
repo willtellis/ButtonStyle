@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+// Creating a customizable ButtonStyle to apply to a Button
+// Pros:
+//   ✅ Supports multiple color schemes
+//   ✅ Encapsulated, reusable, and DRY styling
+//   ✅ Access to button states
+//   ✅ Styling and content are decoupled
+//   ✅ Can use existing button initializers
+//
+// Cons:
+//   ❌ So customizable 😵‍💫
 struct CapsuleButtonStyle: ButtonStyle {
 
     struct ColorScheme {
@@ -97,6 +107,31 @@ extension ButtonStyle where Self == CapsuleButtonStyle {
             )
         )
     }
+
+    static var secondary: Self {
+        .init(
+            enabledColorScheme: .init(
+                foregroundColor: .secondaryEnabledForeground,
+                backgroundColor: .secondaryEnabledBackground,
+                outlineColor: .secondaryEnabledOutline
+            ),
+            pressedColorScheme: .init(
+                foregroundColor: .secondaryPressedForeground,
+                backgroundColor: .secondaryPressedBackground,
+                outlineColor: .secondaryPressedOutline
+            ),
+            hoveredColorScheme: .init(
+                foregroundColor: .secondaryHoveredForeground,
+                backgroundColor: .secondaryHoveredBackground,
+                outlineColor: .secondaryHoveredOutline
+            ),
+            disabledColorScheme: .init(
+                foregroundColor: .secondaryDisabledForeground,
+                backgroundColor: .secondaryDisabledBackground,
+                outlineColor: nil
+            )
+        )
+    }
 }
 
 
@@ -121,6 +156,10 @@ struct CapsuleButtonStyle_Previews: PreviewProvider {
                         Image(systemName: "arrow.forward")
                     }
                 }
+                Button("Secondary") {
+                    // ...
+                }
+                .buttonStyle(.secondary)
             }
             .buttonStyle(.primary)
             .padding()

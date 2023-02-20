@@ -14,6 +14,7 @@ extension Color {
     
     static var gray1: Self { .init("Gray1") }
     static var gray2: Self { .init("Gray2") }
+    static var gray3: Self { .init("Gray3") }
 
     static var white1: Self { .init("White1") }
 
@@ -31,4 +32,20 @@ extension Color {
 
     static var primaryDisabledForeground: Self { .gray2 }
     static var primaryDisabledBackground: Self { .gray1 }
+
+    static var secondaryEnabledForeground: Self { .blue1 }
+    static var secondaryEnabledBackground: Self { .white1 }
+    static var secondaryEnabledOutline: Self { .blue1 }
+
+    static var secondaryPressedForeground: Self { .blue2 }
+    static var secondaryPressedBackground: Self { .gray3 }
+    static var secondaryPressedOutline: Self { .blue2 }
+
+    static var secondaryHoveredForeground: Self { .blue3 }
+    static var secondaryHoveredBackground: Self { .white1 }
+    static var secondaryHoveredOutline: Self { .blue3 }
+
+    static var secondaryDisabledForeground: Self { .gray2 }
+    static var secondaryDisabledBackground: Self { .gray1 }
+
 }
