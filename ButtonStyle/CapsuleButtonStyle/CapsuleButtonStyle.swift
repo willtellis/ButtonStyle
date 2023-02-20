@@ -132,6 +132,33 @@ extension ButtonStyle where Self == CapsuleButtonStyle {
             )
         )
     }
+
+    // NOTE: We could have built this into the "primary" style using
+    //   the `role` attribute of `ButtonStyle.Configuration`
+    static var destructive: Self {
+        .init(
+            enabledColorScheme: .init(
+                foregroundColor: .destructiveEnabledForeground,
+                backgroundColor: .destructiveEnabledBackground,
+                outlineColor: .destructiveEnabledOutline
+            ),
+            pressedColorScheme: .init(
+                foregroundColor: .destructivePressedForeground,
+                backgroundColor: .destructivePressedBackground,
+                outlineColor: .destructivePressedOutline
+            ),
+            hoveredColorScheme: .init(
+                foregroundColor: .destructiveHoveredForeground,
+                backgroundColor: .destructiveHoveredBackground,
+                outlineColor: .destructiveHoveredOutline
+            ),
+            disabledColorScheme: .init(
+                foregroundColor: .destructiveDisabledForeground,
+                backgroundColor: .destructiveDisabledBackground,
+                outlineColor: nil
+            )
+        )
+    }
 }
 
 
@@ -140,28 +167,27 @@ struct CapsuleButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             VStack {
-                Button("Button") {
-                    // ...
-                }
-                Button("Button") {
-                    // ...
-                }
-                .disabled(true)
-                Button {
-                    // ...
-                } label: {
+                Button("Primary") {}
+                    .buttonStyle(.primary)
+
+                Button("Secondary") {}
+                    .buttonStyle(.secondary)
+
+                Button("Disabled") {}
+                    .disabled(true)
+
+                Button {} label: {
                     HStack(spacing: 12) {
                         Image(systemName: "lightbulb")
-                        Text("Button")
+                        Text("Custom Content")
                         Image(systemName: "arrow.forward")
                     }
                 }
-                Button("Secondary") {
-                    // ...
-                }
-                .buttonStyle(.secondary)
+
+                Button("Destructive") {}
+                    .buttonStyle(.destructive)
             }
-            .buttonStyle(.primary)
+            .buttonStyle(.secondary)
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

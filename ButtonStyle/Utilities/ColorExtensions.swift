@@ -16,6 +16,10 @@ extension Color {
     static var gray2: Self { .init("Gray2") }
     static var gray3: Self { .init("Gray3") }
 
+    static var red1: Self { .init("Red1") }
+    static var red2: Self { .init("Red2") }
+    static var red3: Self { .init("Red3") }
+
     static var white1: Self { .init("White1") }
 
     static var primaryEnabledForeground: Self { .white1 }
@@ -48,4 +52,18 @@ extension Color {
     static var secondaryDisabledForeground: Self { .gray2 }
     static var secondaryDisabledBackground: Self { .gray1 }
 
+    static var destructiveEnabledForeground: Self { .white1 }
+    static var destructiveEnabledBackground: Self { .red1 }
+    static var destructiveEnabledOutline: Self { .white1 }
+
+    static var destructivePressedForeground: Self { .white1 }
+    static var destructivePressedBackground: Self { .red2 }
+    static var destructivePressedOutline: Self { .white1 }
+
+    static var destructiveHoveredForeground: Self { .white1 }
+    static var destructiveHoveredBackground: Self { .red3 }
+    static var destructiveHoveredOutline: Self { .white1 }
+
+    static var destructiveDisabledForeground: Self { .gray2 }
+    static var destructiveDisabledBackground: Self { .gray1 }
 }
