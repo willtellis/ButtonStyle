@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Convenience initializers for Button to simplify
+// Convenience Button initializers to simplify
 //   and standardize content
 // Pros:
 //   ✅ Can be used with a custom ButtonStyle
