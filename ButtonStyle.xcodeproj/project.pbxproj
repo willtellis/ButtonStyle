@@ -11,6 +11,7 @@
 		78344BB929A3DAB3009EE889 /* ButtonWithModifiersExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78344BB829A3DAB3009EE889 /* ButtonWithModifiersExample.swift */; };
 		78344BBB29A3F9E7009EE889 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78344BBA29A3F9E7009EE889 /* CustomButtonStyle.swift */; };
 		78344BBD29A40A82009EE889 /* CapsuleButtonWithIconsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78344BBC29A40A82009EE889 /* CapsuleButtonWithIconsStyle.swift */; };
+		78344BBF29A427AA009EE889 /* ButtonStyleFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78344BBE29A427AA009EE889 /* ButtonStyleFeatures.swift */; };
 		7878A913299E922500A2B0D4 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878A912299E922500A2B0D4 /* CapsuleButtonStyle.swift */; };
 		7878A915299ED86B00A2B0D4 /* ButtonLabelWithIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878A914299ED86B00A2B0D4 /* ButtonLabelWithIcons.swift */; };
 		7878A917299EDC2100A2B0D4 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878A916299EDC2100A2B0D4 /* PrimaryButton.swift */; };
@@ -46,6 +47,7 @@
 		78344BB829A3DAB3009EE889 /* ButtonWithModifiersExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithModifiersExample.swift; sourceTree = "<group>"; };
 		78344BBA29A3F9E7009EE889 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		78344BBC29A40A82009EE889 /* CapsuleButtonWithIconsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonWithIconsStyle.swift; sourceTree = "<group>"; };
+		78344BBE29A427AA009EE889 /* ButtonStyleFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleFeatures.swift; sourceTree = "<group>"; };
 		7878A912299E922500A2B0D4 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
 		7878A914299ED86B00A2B0D4 /* ButtonLabelWithIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabelWithIcons.swift; sourceTree = "<group>"; };
 		7878A916299EDC2100A2B0D4 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				78344BB829A3DAB3009EE889 /* ButtonWithModifiersExample.swift */,
 				78344BB629A3D2B3009EE889 /* CustomButton.swift */,
+				78344BBE29A427AA009EE889 /* ButtonStyleFeatures.swift */,
 				78344BBA29A3F9E7009EE889 /* CustomButtonStyle.swift */,
 				78344BB529A3CA4F009EE889 /* CapsuleButtonStyle */,
 				78344BB429A3CA2E009EE889 /* Utilities */,
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78344BBF29A427AA009EE889 /* ButtonStyleFeatures.swift in Sources */,
 				78344BBB29A3F9E7009EE889 /* CustomButtonStyle.swift in Sources */,
 				7878A917299EDC2100A2B0D4 /* PrimaryButton.swift in Sources */,
 				78344BBD29A40A82009EE889 /* CapsuleButtonWithIconsStyle.swift in Sources */,
