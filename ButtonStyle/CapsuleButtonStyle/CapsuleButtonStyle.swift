@@ -105,26 +105,24 @@ struct CapsuleButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             VStack {
-                Button("Primary") {
+                Button("Button") {
                     // ...
                 }
-                .buttonStyle(.primary)
-                Button("Primary") {
+                Button("Button") {
                     // ...
                 }
-                .buttonStyle(.primary)
                 .disabled(true)
                 Button {
                     // ...
                 } label: {
                     HStack(spacing: 12) {
                         Image(systemName: "lightbulb")
-                        Text("Primary")
+                        Text("Button")
                         Image(systemName: "arrow.forward")
                     }
                 }
-                .buttonStyle(.primary)
             }
+            .buttonStyle(.primary)
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

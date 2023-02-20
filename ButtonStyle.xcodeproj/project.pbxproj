@@ -79,6 +79,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78344BB429A3CA2E009EE889 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				78826F06298D91040097A697 /* ColorExtensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		78344BB529A3CA4F009EE889 /* CapsuleButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				7878A912299E922500A2B0D4 /* CapsuleButtonStyle.swift */,
+				7878A914299ED86B00A2B0D4 /* ButtonLabelWithIcons.swift */,
+				7878A916299EDC2100A2B0D4 /* PrimaryButton.swift */,
+			);
+			path = CapsuleButtonStyle;
+			sourceTree = "<group>";
+		};
 		78826ED0298C0D440097A697 = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +120,12 @@
 		78826EDB298C0D440097A697 /* ButtonStyle */ = {
 			isa = PBXGroup;
 			children = (
+				78344BB529A3CA4F009EE889 /* CapsuleButtonStyle */,
+				78344BB429A3CA2E009EE889 /* Utilities */,
 				78826EDC298C0D440097A697 /* ButtonStyleApp.swift */,
 				78826EDE298C0D440097A697 /* ContentView.swift */,
-				78826F06298D91040097A697 /* ColorExtensions.swift */,
 				78826EE0298C0D450097A697 /* Assets.xcassets */,
 				78826EE2298C0D450097A697 /* Preview Content */,
-				7878A912299E922500A2B0D4 /* CapsuleButtonStyle.swift */,
-				7878A914299ED86B00A2B0D4 /* ButtonLabelWithIcons.swift */,
-				7878A916299EDC2100A2B0D4 /* PrimaryButton.swift */,
 			);
 			path = ButtonStyle;
 			sourceTree = "<group>";
