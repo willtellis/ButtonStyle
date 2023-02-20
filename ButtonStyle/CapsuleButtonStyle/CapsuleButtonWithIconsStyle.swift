@@ -7,7 +7,19 @@
 
 import SwiftUI
 
-struct CapsuleButtonWithIconsStyle<LeadingIcon, TrailingIcon>: ButtonStyle where LeadingIcon: View, TrailingIcon: View {
+// Creating a customizable ButtonStyle with optional leading
+//   and trailing icons to apply to a Button
+// Pros:
+//   ✅ Supports multiple color schemes
+//   ✅ Encapsulated, reusable, and DRY styling
+//   ✅ Access to button states
+//   ✅ Styling and content are still decoupled
+//   ✅ Can use existing button initializers
+//
+// Cons:
+//   ❌ Some boilerplate
+//   ❌ What even is a style? 😵‍💫
+struct CapsuleButtonWithIconsStyle<LeadingIcon: View, TrailingIcon: View>: ButtonStyle {
 
     struct ColorScheme {
         let foregroundColor: Color

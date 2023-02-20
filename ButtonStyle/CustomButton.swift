@@ -14,7 +14,8 @@ import SwiftUI
 // Cons:
 //   ❌ No access to button pressed state
 //   ❌ Tight coupling of styling and content
-//   ❌ Have to duplicate Button initializers boilerplate
+//   ❌ Have to duplicate Button boilerplate (e.g.,
+//      initializers, generic Label type)
 struct CustomButton<Label: View>: View {
     private let label: () -> Label
     private let action: () -> Void
@@ -48,7 +49,7 @@ extension CustomButton where Label == Text {
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            CustomButton("Button") {}
+            CustomButton("Custom") {}
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGray2))

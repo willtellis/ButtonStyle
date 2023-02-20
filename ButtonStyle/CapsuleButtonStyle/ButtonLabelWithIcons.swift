@@ -7,20 +7,15 @@
 
 import SwiftUI
 
-struct ButtonLabelWithIcons<LeadingIcon: View, TrailingIcon: View>: View {
-    let title: any StringProtocol
-    let leadingIcon: LeadingIcon
-    let trailingIcon: TrailingIcon
-
-    var body: some View {
-        HStack(spacing: 12) {
-            leadingIcon
-            Text(title)
-            trailingIcon
-        }
-    }
-}
-
+// Convenience initializers for Button to simplify
+//   and standardize content
+// Pros:
+//   ✅ Can be used with a custom ButtonStyle
+//   ✅ Styling and content are decoupled
+//   ✅ Still just a plain old Button
+//
+// Cons:
+//   ❌ Some boilerplate
 extension Button {
 
     init<LeadingIcon: View, TrailingIcon: View>(
@@ -48,6 +43,20 @@ extension Button {
         action: @escaping () -> Void
     ) where Label == ButtonLabelWithIcons<EmptyView, TrailingIcon> {
         self.init(title, leadingIcon: EmptyView(), trailingIcon: trailingIcon, action: action)
+    }
+}
+
+struct ButtonLabelWithIcons<LeadingIcon: View, TrailingIcon: View>: View {
+    let title: any StringProtocol
+    let leadingIcon: LeadingIcon
+    let trailingIcon: TrailingIcon
+
+    var body: some View {
+        HStack(spacing: 12) {
+            leadingIcon
+            Text(title)
+            trailingIcon
+        }
     }
 }
 

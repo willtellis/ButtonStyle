@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+// Custom View wrapping a button Button to simplify
+//   and standardize content and style
+// Pros:
+//   ✅ Styling and content are contained in a simple API
+//   ✅ Still just a plain old Button
+//
+// Cons:
+//   ❌ Cannot be used with another ButtonStyle
+//   ❌ Not a plain old Button
+//   ❌ Lots of duplicated code to provide another button type
 struct PrimaryButton<LeadingIcon: View, TrailingIcon: View>: View {
     let title: any StringProtocol
     let leadingIcon: LeadingIcon

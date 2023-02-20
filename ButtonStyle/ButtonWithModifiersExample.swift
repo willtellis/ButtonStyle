@@ -32,7 +32,6 @@ struct ButtonWithModifiersExample_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             ButtonWithModifiersExample()
-
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGray2))
