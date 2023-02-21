@@ -12,8 +12,8 @@ import SwiftUI
 //   ✅ Encapsulated, reusable, and DRY styling
 //
 // Cons:
-//   ❌ No access to button pressed state
 //   ❌ Tight coupling of styling and content
+//   ❌ No access to button pressed state
 //   ❌ Have to duplicate Button boilerplate (e.g.,
 //      initializers, generic Label type)
 struct CustomButton<Label: View>: View {
@@ -24,10 +24,10 @@ struct CustomButton<Label: View>: View {
         Button(action: action, label: label)
             .padding(.vertical, 12)
             .padding(.horizontal, 24)
-            .foregroundColor(Color.primaryEnabledForeground)
-            .background(Capsule().fill(Color.primaryEnabledBackground))
+            .foregroundColor(Color.white1)
+            .background(Capsule().fill(Color.blue1))
             .overlay(
-                Capsule().strokeBorder(Color.primaryEnabledOutline)
+                Capsule().strokeBorder(Color.white1)
             )
     }
 

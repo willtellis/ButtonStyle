@@ -25,13 +25,13 @@ struct CustomButtonStyle: ButtonStyle {
             .padding(.vertical, 12)
             .padding(.horizontal, 24)
             .foregroundColor(
-                isPressed ? Color.primaryPressedForeground : Color.primaryEnabledForeground
+                isPressed ? Color.blue1 : Color.white1
             )
             .background(Capsule().fill(
-                isPressed ? Color.primaryPressedBackground : Color.primaryEnabledBackground
+                isPressed ? Color.blue2 : Color.blue1
             ))
             .overlay(Capsule().strokeBorder(
-                isPressed ? Color.primaryPressedOutline : Color.primaryEnabledOutline
+                isPressed ? Color.blue1 : Color.white1
             ))
     }
 }
@@ -40,15 +40,16 @@ struct CustomButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Button("Button") {}
+                .buttonStyle(CustomButtonStyle())
+
             Button {} label: {
                 HStack {
                     Text("Button")
                     Image(systemName: "checkmark.seal")
                 }
             }
-
+            .buttonStyle(CustomButtonStyle())
         }
-        .buttonStyle(CustomButtonStyle())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGray2))
     }

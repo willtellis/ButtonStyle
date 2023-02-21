@@ -48,9 +48,15 @@ struct CapsuleButtonStyle: ButtonStyle {
         let hoveredColorScheme: ColorScheme
         let disabledColorScheme: ColorScheme
 
-        @Environment(\.isEnabled) private var isEnabled
-        private var isPressed: Bool { configuration.isPressed }
-        @State private var isHovered: Bool = false
+        private var isPressed: Bool {
+            configuration.isPressed
+        }
+
+        @Environment(\.isEnabled)
+        private var isEnabled
+
+        @State
+        private var isHovered: Bool = false
 
         private let shape = Capsule()
 
@@ -84,7 +90,7 @@ struct CapsuleButtonStyle: ButtonStyle {
 
 extension ButtonStyle where Self == CapsuleButtonStyle {
     static var primary: Self {
-        .init(
+        CapsuleButtonStyle(
             enabledColorScheme: .init(
                 foregroundColor: .primaryEnabledForeground,
                 backgroundColor: .primaryEnabledBackground,
@@ -109,7 +115,7 @@ extension ButtonStyle where Self == CapsuleButtonStyle {
     }
 
     static var secondary: Self {
-        .init(
+        CapsuleButtonStyle(
             enabledColorScheme: .init(
                 foregroundColor: .secondaryEnabledForeground,
                 backgroundColor: .secondaryEnabledBackground,
@@ -136,7 +142,7 @@ extension ButtonStyle where Self == CapsuleButtonStyle {
     // NOTE: We could have built this into the "primary" style using
     //   the `role` attribute of `ButtonStyle.Configuration`
     static var destructive: Self {
-        .init(
+        CapsuleButtonStyle(
             enabledColorScheme: .init(
                 foregroundColor: .destructiveEnabledForeground,
                 backgroundColor: .destructiveEnabledBackground,

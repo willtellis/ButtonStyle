@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+struct ButtonLabelWithIcons<LeadingIcon: View, TrailingIcon: View>: View {
+    let title: any StringProtocol
+    let leadingIcon: LeadingIcon
+    let trailingIcon: TrailingIcon
+
+    var body: some View {
+        HStack(spacing: 12) {
+            leadingIcon
+            Text(title)
+            trailingIcon
+        }
+    }
+}
+
 // Convenience Button initializers to simplify
 //   and standardize content
 // Pros:
@@ -46,38 +60,26 @@ extension Button {
     }
 }
 
-struct ButtonLabelWithIcons<LeadingIcon: View, TrailingIcon: View>: View {
-    let title: any StringProtocol
-    let leadingIcon: LeadingIcon
-    let trailingIcon: TrailingIcon
-
-    var body: some View {
-        HStack(spacing: 12) {
-            leadingIcon
-            Text(title)
-            trailingIcon
-        }
-    }
-}
-
 struct ButtonLabelWithIcons_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            Button("Primary", leadingIcon: Image(systemName: "lightbulb")) {
-                // ...
-            }
-            .buttonStyle(.primary)
-            Button("Primary", trailingIcon: Image(systemName: "arrow.forward")) {
-                // ...
-            }
-            .buttonStyle(.primary)
             Button(
-                "Primary",
+                "Leading Icon",
+                leadingIcon: Image(systemName: "lightbulb")
+            ) {}
+            .buttonStyle(.primary)
+
+            Button(
+                "Trailing Icon",
+                trailingIcon: Image(systemName: "arrow.forward")
+            ) {}
+            .buttonStyle(.primary)
+
+            Button(
+                "Both Icons",
                 leadingIcon: Image(systemName: "lightbulb"),
                 trailingIcon: Image(systemName: "arrow.forward")
-            ) {
-                // ...
-            }
+            ) {}
             .buttonStyle(.primary)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

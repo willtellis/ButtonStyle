@@ -20,10 +20,10 @@ struct ButtonWithModifiersExample: View {
         }
         .padding(.vertical, 12)
         .padding(.horizontal, 24)
-        .foregroundColor(Color.primaryEnabledForeground)
-        .background(Capsule().fill(Color.primaryEnabledBackground))
+        .foregroundColor(Color.white1)
+        .background(Capsule().fill(Color.blue1))
         .overlay(
-            Capsule().strokeBorder(Color.primaryEnabledOutline)
+            Capsule().strokeBorder(Color.white1)
         )
     }
 }

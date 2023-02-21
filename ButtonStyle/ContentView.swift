@@ -10,33 +10,36 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Button {
-                // ...
-            } label: {
-                HStack(spacing: 12) {
-                    Image(systemName: "lightbulb")
-                    Text("Primary")
-                    Image(systemName: "arrow.forward")
-                }
-            }
-            .buttonStyle(.primary)
+            Button("Primary") {}
+                .buttonStyle(.primary)
 
-            PrimaryButton("Primary") {
-                // ...
-            }
-            PrimaryButton("Primary", leadingIcon: Image(systemName: "lightbulb")) {
-                // ...
-            }
-            PrimaryButton("Primary", trailingIcon: Image(systemName: "arrow.forward")) {
-                // ...
-            }
-            PrimaryButton(
-                "Primary",
-                leadingIcon: Image(systemName: "lightbulb"),
-                trailingIcon: Image(systemName: "arrow.forward")
-            ) {
-                // ...
-            }
+            Button("Secondary") {}
+                .buttonStyle(.secondary)
+
+            Button("Destructive") {}
+                .buttonStyle(.destructive)
+
+            Button("Disabled") {}
+                .buttonStyle(.primary)
+                .disabled(true)
+
+            Button("Leading Icon") {}
+                .buttonStyle(
+                    .primaryWithIcons(leading: Image(systemName: "lightbulb"))
+                )
+
+            Button("Trailing Icon") {}
+                .buttonStyle(
+                    .primaryWithIcons(trailing: Image(systemName: "arrow.forward"))
+                )
+
+            Button("Trailing Icon") {}
+                .buttonStyle(
+                    .primaryWithIcons(
+                        leading: Image(systemName: "lightbulb"),
+                        trailing: Image(systemName: "arrow.forward")
+                    )
+                )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(uiColor: .systemGray2))
